@@ -1,25 +1,27 @@
-# TriathlonHelper
-This repo is created for TriathlonHelper app
-Triathlon Weather Training Recommender
+# [Start Bootstrap](http://startbootstrap.com/) - [Stylish Portfolio](http://startbootstrap.com/template-overviews/stylish-portfolio/)
 
-Team Triathlon:  Kaushik Devulapalli, Brian Bugle, Noor Altaweel, Vanessa Blue
-Project Description:  Athletes training for triathlons, especially in the elite categories such as the Ironman and Half-Ironman require a tremendous amount training activities.  These are often limited by the athletes schedule to be able to train, the weather for a particular day, and the resources available such as trails for running and biking and swimming pools / open swim courses.  We are proposing the development of a web based application that will allow the athlete to input their zip code into a search field which will bring up the local weather forecast and make a recommendation for that period of time.  This is particularly useful to users who many be travelling or on vacation and are not familiar with the area.  (For purposes of this project, we may limit the search parameters.)  Based on the weather forecast, the app will make a recommendation on a recommended activity.  For example, if thunderstorms are predicted for 5am then the app may recommend to swim indoors.  It will also recommend the locations of indoor pools in a certain radius.
-Project Logic:
+[Stylish Portfolio](http://startbootstrap.com/template-overviews/stylish-portfolio/) is a responsive, one page portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). The theme features multiple content sections with an off canvas navigation menu.
 
- 
+## Getting Started
 
-Sketch of Final Product:
+To begin using this template, choose one of the following options to get started:
+* [Download the latest release on Start Bootstrap](http://startbootstrap.com/template-overviews/stylish-portfolio/)
+* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio.git`
+* Fork the repo
 
-  
-APIs:
-Google Maps: Bike trail information and maps
-Open Weather Map 
-Yelp
+## Bugs and Issues
 
-Task Breakdown:
-Front end, Git repository management, and testing:  Vanessa
-Map API file layout, and zip code validator: Brian
-Weather API:  Noor
-Yelp API, logic sequencing and database:  Kaushik
+Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/stylish-portfolio/).
 
+## Creator
 
+Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
+
+* https://twitter.com/davidmillerskt
+* https://github.com/davidtmiller
+
+Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+
+## Copyright and License
+
+Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio/blob/gh-pages/LICENSE) license.
