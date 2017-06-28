@@ -16,6 +16,7 @@
     <meta name="author" content="">
 
     <title>Triathlon Helper</title>
+    
 
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" typ">
 
@@ -32,43 +33,18 @@
 
 <body>
 
-    <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand">
-                <a href="#top" onclick=$("#menu-close").click();>Team Triathlon</a>
-            </li>
-            <li>
-                <a href="#top" onclick=$("#menu-close").click();>Home</a>
-            </li>
-            <li>
-                <a href="#about" onclick=$("#menu-close").click();>About</a>
-            </li>
-            <li>
-                <a href="#services" onclick=$("#menu-close").click();>Services</a>
-            </li>
-            <li>
-                <a href="#portfolio" onclick=$("#menu-close").click();>Portfolio</a>
-            </li>
-            <li>
-                <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
-            </li>
-        </ul>
-    </nav>
-
+    
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
-            <h1>Triathlon Helper</h1>
+            <h1>Triathlon Helper</h1><br>
 
-            <h3>Enter your area zip-code to find out recommend triathlon activity for the day</h3>
-            <br>
+            <h2>Enter your area ZipCode to find out recommend triathlon activity for the day</h2><br>
+            
             <!-- <a href="#about" class="btn btn-dark btn-lg">Submit</a> -->
             <form role="form">
               <div class="form-group">
-                <label for="name-input" type="submit">zipCode: </label>
+                <label for="name-input" type="submit">ZipCode: </label>
                 <input  id="user-input" type="text"  data-value="city">
                  <button id="zipCode" type="submit" value="add">Add</button>
                 <span id="error"></span>
@@ -76,12 +52,6 @@
 
         </div>
     </header>
-
-
-
-
-
-
 
 
 
@@ -162,7 +132,7 @@
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
 
-                    <h2>Your Training Options For This Town</h2>
+                    <h1 id="activityTitle">Your Training Options For This Town</h1>
 
                     
                     <hr class="small">
@@ -171,13 +141,13 @@
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-cloud fa-stack-1x text-primary"></i>
+                                <i class="fa fa-bicycle fa-stack-1x text-primary"></i> 
                             </span>
                                 <h4>
-                                    <strong>Bike Trails</strong>
+                                    <strong>Bike Trails</strong><br><br>
                                 </h4>
 
-                                <p>Learn about where to find popular local running trails.</p>
+                                <p>Learn about where to find popular local running trails.</p><br>
 
                                 <a href="#" class="btn btn-light">Learn More</a>
                              
@@ -190,10 +160,10 @@
                                 <i class="fa fa-compass fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Running Paths</strong>
+                                    <strong>Running Paths</strong><br><br>
                                 </h4>
 
-                                <p>Learn about where to find popular local running trails.</p>
+                                <p>Learn about where to find popular local running trails.</p><br>
 
                                 <a href="#" class="btn btn-light">Learn More</a>
                             </div>
@@ -202,13 +172,13 @@
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
+                                <i class="fa fa-sun-o fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Open Swim</strong>
+                                    <strong>Open Swim</strong><br><br>
                                 </h4>
 
-                                <p>Learn about where to find local open water swim options.</p>
+                                <p>Learn about where to find local open water swim options.</p><br>
 
                                 <a href="#" class="btn btn-light">Learn More</a>
                             </div>
@@ -220,10 +190,10 @@
                                 <i class="fa fa-shield fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Indoor Swim</strong>
+                                    <strong>Indoor Swim</strong><br><br>
                                 </h4>
 
-                                <p>Learn about where to find public indoor swimming options.</p>
+                                <p>Where to find public indoor swimming options.</p><br>
 
                                 <a href="#" class="btn btn-light">Learn More</a>
                             </div>

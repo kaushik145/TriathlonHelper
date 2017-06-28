@@ -354,4 +354,9 @@ header figure img {
     font-weight: 700;
     color: #1f69be; 
     }
+
+    #activityTitle {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
     
