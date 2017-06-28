@@ -4,13 +4,6 @@
 <head>
 
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Stylish Portfolio - Start Bootstrap Theme</title>
-
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -18,9 +11,16 @@
     <link href="css/stylish-portfolio.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
+    <title>Triathlon Helper</title>
+
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" typ">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -62,10 +62,18 @@
     <header id="top" class="header">
         <div class="text-vertical-center">
             <h1>Triathlon Helper</h1>
-            <h3>Enter your zip-code to find out recommended triathlon training activity for today.</h3>
+
+            <h3>Enter your area zip-code to find out recommend triathlon activity for the day</h3>
             <br>
-            
-            <a href="#about" class="btn btn-dark btn-lg">zip-code</a>
+            <!-- <a href="#about" class="btn btn-dark btn-lg">Submit</a> -->
+            <form role="form">
+              <div class="form-group">
+                <label for="name-input" type="submit">zipCode: </label>
+                <input  id="user-input" type="text"  data-value="city">
+                 <button id="zipCode" type="submit" value="add">Add</button>
+                <span id="error"></span>
+              </div>
+
         </div>
     </header>
 
@@ -83,8 +91,61 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
 
-                    <!-- <h2>This will display the weather information for the project!</h2>
-                    <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p> -->
+                    <h2 id="nTitile">Weather Display</h2>
+                  
+                            <header>
+                                <figure class="wu"><img src="img/004-sky.png"></figure>
+                                 
+                               </header>
+                            
+                         <main>
+                            <section id="left">
+                            <!-- brina the location goes here -->
+                                <div id="location"> Fairfax,VA</div>  
+                                <br>
+                                <div id="cCondition">Current Conditions</div>
+                                <br>
+                                <div><span>Humidity:</span>
+                                <span id="aveHumidity"></span>
+                                </div>
+                                 <br>
+                                <span id="forcastDay"></span>
+                            </section>
+                            <!-- Dipaly the weekdays temp-->
+                            <section id="right">
+                            <div>
+                                <span id="r1c1"></span>
+                                <span> <img id="r1c2" ></span>
+                                <span id="r1c3"></span>
+                                <span id="r1c4"></span>
+                            </div>  
+                            <div>
+                                <span id="r2c1"></span>
+                                <span> <img id="r2c2" ></span>
+                                <span id="r2c3"></span>
+                                <span id="r2c4"></span>
+                            </div>  
+                            <div>
+                                <span id="r3c1"></span>
+                                <span> <img id="r3c2" ></span>
+                                <span id="r3c3"></span>
+                                <span id="r3c4"></span>
+                            </div>  
+                            <div>
+                                <span id="r4c1"></span>
+                                <span> <img id="r4c2" ></span>
+                                <span id="r4c3"></span>
+                                <span id="r4c4"></span>
+                            </div>  
+                            <div>
+                                <span id="r5c1"></span>
+                                <span> <img id="r5c2" ></span>
+                                <span id="r5c3"></span>
+                                <span id="r5c4"></span>
+                            </div>
+                     </main>
+                  
+
                 </div>
             </div>
             <!-- /.row -->
@@ -100,7 +161,10 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
+
                     <h2>Your Training Options For This Town</h2>
+
+                    
                     <hr class="small">
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
@@ -112,8 +176,11 @@
                                 <h4>
                                     <strong>Bike Trails</strong>
                                 </h4>
+
                                 <p>Learn about where to find popular local running trails.</p>
+
                                 <a href="#" class="btn btn-light">Learn More</a>
+                             
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
@@ -125,7 +192,9 @@
                                 <h4>
                                     <strong>Running Paths</strong>
                                 </h4>
+
                                 <p>Learn about where to find popular local running trails.</p>
+
                                 <a href="#" class="btn btn-light">Learn More</a>
                             </div>
                         </div>
@@ -138,7 +207,9 @@
                                 <h4>
                                     <strong>Open Swim</strong>
                                 </h4>
+
                                 <p>Learn about where to find local open water swim options.</p>
+
                                 <a href="#" class="btn btn-light">Learn More</a>
                             </div>
                         </div>
@@ -151,7 +222,9 @@
                                 <h4>
                                     <strong>Indoor Swim</strong>
                                 </h4>
+
                                 <p>Learn about where to find public indoor swimming options.</p>
+
                                 <a href="#" class="btn btn-light">Learn More</a>
                             </div>
                         </div>
@@ -288,7 +361,8 @@
         // Enable map zooming with mouse scroll when the user clicks the map
     $('.map').on('click', onMapClickHandler);
     </script>
-
+        <script type="text/javascript" src="js/weather.js"></script>
+        <!-- <script type="text/javascript" src="js/wapp.js"></script> -->
 </body>
 
 </html>
