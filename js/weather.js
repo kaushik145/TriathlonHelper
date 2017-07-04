@@ -46,7 +46,7 @@ function MainLeftDisplay(parsed_json){
 
 // main left area
 
-$('#location').html('City State');
+// $('#location').html('City State');
 $('#cCondition').html(parsed_json.forecast.simpleforecast.forecastday["0"].conditions);
 $('#aveHumidity').html(parsed_json.forecast.simpleforecast.forecastday["0"].avehumidity+'%');
  $('#forcastDay').html(parsed_json.forecast.txt_forecast.forecastday["0"].fcttext);
