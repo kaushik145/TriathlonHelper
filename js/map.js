@@ -31,7 +31,7 @@ $(document).ready(function() {
 					mapObj.lng = results[0].geometry.location.lng();
 					mapObj.displayMap();
 				} else {
-					console.log(`Geocode was not successful for the following reason: ${status}`);
+					console.error(`Geocode was not successful for the following reason: ${status}`);
 				}
 		    });
 		},
@@ -47,15 +47,19 @@ $(document).ready(function() {
 				map: this.map,
 				title: 'Your Position'
 			});
-
-	        var bikeLayer = new google.maps.BicyclingLayer();
-		        bikeLayer.setMap(this.map);
-			}
+		}
 	}
 
 	$('#zipCode').on('click', function() {
 		mapObj.zipCode = $('#user-input').val();
-		console.log('zip: ', mapObj.zipCode);
 		mapObj.initMap();
+	});
+
+	$('#bike-trail, #running-path').on('click', function() {
+        var bikeLayer = new google.maps.BicyclingLayer();
+	        bikeLayer.setMap(mapObj.map);
+	});
+
+	$('#open-swim, #indoor-swim').on('click', function() {
 	});
 });
