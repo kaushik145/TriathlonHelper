@@ -19,6 +19,11 @@ $("#zipCode").on('click', function(e){
 
     console.log(queryURL)
   if(userInput !== "" && userInput.length === 5){
+
+    $('html, body').animate({
+        scrollTop: $("#about").offset().top
+    }, 1000);
+
   $.ajax({
   url : queryURL,
   dataType : "jsonp",
@@ -28,7 +33,6 @@ $("#zipCode").on('click', function(e){
     		 // weekDays(parsed_json);
            weekDispaly(parsed_json);  // display the left side
            tempAverage();
-    
       }
  });
 
