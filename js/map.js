@@ -41,12 +41,40 @@ $(document).ready(function() {
 				scrollwheel: false,
 				zoom: 13
 			});
-
-			var marker = new google.maps.Marker({
-				position: {lat: this.lat, lng: this.lng},
+		},
+		addBikeLayer: function() {
+	        const bikeLayer = new google.maps.BicyclingLayer();
+	        bikeLayer.setMap(this.map);
+		},
+		addPools: function() {
+		    const service = new google.maps.places.PlacesService(this.map);
+	        service.nearbySearch({
+				location: {lat: this.lat, lng: this.lng},
+				radius: 5000,
+				type: ['swimming pool']
+	        }, function(results, status) {
+				for (var i = 0; i < results.length; i++) {
+					const message = `<div class="popup"><h1>${results[i].name}</h1><p>${results[i].vicinity}</p></center>`;
+					mapObj.addMarker({
+						lat: results[i].geometry.location.lat(),
+						lng: results[i].geometry.location.lng()
+					}, message);
+				}
+	        });
+		},
+		addMarker: function(coords, message) {
+			const marker = new google.maps.Marker({
+				position: {lat: coords.lat, lng: coords.lng},
 				map: this.map,
-				title: 'Your Position'
 			});
+
+			const infoWindow = new google.maps.InfoWindow({
+                content: message
+            });
+
+            google.maps.event.addListener(marker, 'click', function () {
+                infoWindow.open(this.map, marker);
+            });
 		}
 	}
 
@@ -56,10 +84,10 @@ $(document).ready(function() {
 	});
 
 	$('#bike-trail, #running-path').on('click', function() {
-        var bikeLayer = new google.maps.BicyclingLayer();
-	        bikeLayer.setMap(mapObj.map);
+		mapObj.addBikeLayer();
 	});
 
 	$('#open-swim, #indoor-swim').on('click', function() {
+		mapObj.addPools();
 	});
 });
