@@ -14,19 +14,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+
+    
     <title>Triathlon Helper</title>
     
+
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" typ">
 
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js" rel='stylesheet' type='text/css'>
+
      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+ 
    <link rel="stylesheet" href="css/semi-transparent-buttons.css">
    <link href="css/stylish-portfolio.css" rel="stylesheet">
    <!-- login script -->
@@ -36,6 +34,12 @@
 		<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase-database.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase-messaging.js"></script>
 	</head>
+
+
+    <link rel="stylesheet" href="css/map.css">
+
+</head>
+
 
 <body>
 
@@ -51,6 +55,7 @@
             <h2>Enter your area ZipCode to find out recommend triathlon activity for the day</h2><br>
             
             <!-- <a href="#about" class="btn btn-dark btn-lg">Submit</a> -->
+
             <div class="row">
              <div class=" col-sm-4 col-sm-offset-4">
              <div id="userlogin">
@@ -73,7 +78,7 @@
 			                <span id="error"></span>
 			              </div>
 			          </form>
-			              		    <button id="btnLogout" class="btn btn-action pull-right">Log Out</button>
+			     <button id="btnLogout" class="btn btn-action pull-right">Log Out</button>
 			     </div>
       
 
@@ -81,11 +86,10 @@
 				</div>
 	           </div>
 	           
-		             <!-- <input type="email" placeholder="Enter Username" name="uname" required>  
-		              <input type="password" placeholder="Enter Password" data-minlength="6" name="psw" required>
-		              <button type="submit">Login</button>  -->
-              
-          
+
+           
+        </div>
+
     </header>
 
 
@@ -184,7 +188,8 @@
 
                                 <p>Learn about where to find popular local running trails.</p><br>
 
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                <a href="#map" class="btn btn-light" id="bike-trail">Learn More</a>
+
                              
                             </div>
                         </div>
@@ -200,7 +205,8 @@
 
                                 <p>Learn about where to find popular local running trails.</p><br>
 
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                <a href="#map" class="btn btn-light" id="running-path">Learn More</a>
+
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
@@ -215,7 +221,9 @@
 
                                 <p>Learn about where to find local open water swim options.</p><br>
 
-                                <a href="#" class="btn btn-light">Learn More</a>
+
+                                <a href="#map" class="btn btn-light" id="open-swim">Learn More</a>
+
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
@@ -230,7 +238,9 @@
 
                                 <p>Where to find public indoor swimming options.</p><br>
 
-                                <a href="#" class="btn btn-light">Learn More</a>
+
+                                <a href="#map" class="btn btn-light" id="indoor-swim">Learn More</a>
+
                             </div>
                         </div>
                     </div>
@@ -245,13 +255,7 @@
 
 
     <!-- Map -->
-    <section id="contact" class="map">
-        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-        <br />
-        <small>
-            <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-        </small>
-    </section>
+    <div id="map"></div>
 
     <!-- Footer -->
     <footer>
@@ -366,9 +370,15 @@
         // Enable map zooming with mouse scroll when the user clicks the map
     $('.map').on('click', onMapClickHandler);
     </script>
-        <script type="text/javascript" src="js/weather.js"></script>
+        
         <script src="js/app.js"></script>
-       
+        <script type="text/javascript" src="js/map.js"></script>
+        <script type="text/javascript" src="js/weather.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCykvc1EjkCxktbxQSwiAnk_2NcTmjhr9o&libraries=places&callback=initMap"
+        async defer></script>
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap" async defer></script> -->
+        <!-- <script type="text/javascript" src="js/wapp.js"></script> -->
+
 </body>
 
 </html>

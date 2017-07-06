@@ -1,5 +1,4 @@
  
-
  var config = {
     apiKey: "AIzaSyDn8pqJb2kq-3nDcBV13bSs8UZzssCKCcc",
     authDomain: "projectone-3d09c.firebaseapp.com",
