@@ -47,6 +47,7 @@ body {
     font-weight: 700;
 }
 
+ 
 /* Custom Button Styles */
 
 .btn-dark {
@@ -257,7 +258,7 @@ hr.small {
 /* Footer */
 
 footer {
-    padding: 35px 0;
+    padding: 100px 0;
 }
 
 #to-top {
@@ -325,6 +326,15 @@ footer {
         margin:10px;
 
     }
+
+   header> form {
+    position: relative;
+    z-index: 10;
+     max-width: 400px; 
+    max-height: 300px;
+    margin:0;
+    padding:20px;
+ }
 div#wrapper {
   height: 100vh;
   position: relative;
@@ -354,18 +364,6 @@ header figure img {
     font-weight: 700;
     color: #1f69be; 
     }
-
-    #login{
-        
-    position: absolute;
-    z-index: 10;
-    /*float: right;*/
- }
-             
-
-
-    #activityTitle {
-        font-size: 2.5rem;
-        font-weight: 700;
-    }
     
+   
+

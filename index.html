@@ -11,7 +11,8 @@
     <link href="css/stylish-portfolio.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -51,17 +52,15 @@
         <div class="text-vertical-center">
 
             <h1>Triathlon Helper</h1><br>
-
-            <h2>Enter your area ZipCode to find out recommend triathlon activity for the day</h2><br>
+            <h2 id="messageOne" > Please Login</h2>
+            <h2 id="messageTwo" > Thank You for Login <br>Enter your area ZipCode to find out recommend triathlon activity for the day</h2><br>
             
-            <!-- <a href="#about" class="btn btn-dark btn-lg">Submit</a> -->
-
             <div class="row">
              <div class=" col-sm-4 col-sm-offset-4">
              <div id="userlogin">
                   <form id='login' data-toggle="validator" role="form">
 	             		<input id="textEmail" type="email" placeholder="Email">
-						 <input type="password" id="txtPasword" placeholder="Password">
+						 <input type="password" id="txtPasword" placeholder="Password"><br>
 						 <button id="btnlogin" class="btn bt-action semi-transparent-button" > Login</button>
 						<button id="btnSignup" class="btn btn-secondary semi-transparent-button"> Sign Up</button>
 						<!-- <button id="googleSignin" class="btn btn-action">sign Up with Google Account</button> -->
@@ -78,7 +77,7 @@
 			                <span id="error"></span>
 			              </div>
 			          </form>
-			     <button id="btnLogout" class="btn btn-action pull-right">Log Out</button>
+			     <button id="btnLogout" class="btn btn-action" value="Refresh Page" onClick="window.location.href=window.location.href">Log Out</button>
 			     </div>
       
 
@@ -159,6 +158,11 @@
             </div>
             <!-- /.row -->
         </div>
+                        <div class="row">
+                          <div class="col-lg-12">
+                             <img src="img/wundergroundLogo_4c.png" alt="WeatherLogo" id="logo">
+                         </div>
+                     </div>
         <!-- /.container -->
     </section>
 

@@ -39,14 +39,20 @@
   // Handle Errors here.
   var errorCode = error.code;
   var errorMessage = error.message;
+  if (errorCode == 'auth/invalid-email'|| errorCode == "auth/user-not-found" ) {
+    alert(errorMessage);
+  } else if( errorCode =="auth/wrong-password") {
+    alert(errorMessage);
+
+     } 
   // ...
 });
-  	 $('#userZipcode').show();
-  	 btnLogout.show();
-  	 uemail.hide();
-  	 upassword.hide();
-  	 btnlogin.hide();
-     btnSignup.hide();
+  	 // $('#userZipcode').show();
+  	 // btnLogout.show();
+  	 // uemail.hide();
+  	 // upassword.hide();
+  	 // btnlogin.hide();
+    //  btnSignup.hide();
   	 
   });
 //  //sighn up
@@ -74,60 +80,47 @@ btnSignup.click(function(e){
   }
   console.log(error);
 });
-       $('#userZipcode').show();
-         btnLogout.show();
-          uemail.hide()
-  	      upassword.hide();
-         btnlogin.hide();
-         btnSignup.hide();
+       // $('#userZipcode').show();
+       //   btnLogout.show();
+       //    uemail.hide()
+  	    //   upassword.hide();
+       //   btnlogin.hide();
+       //   btnSignup.hide();
 })
 
-googleAccount.click(function(e){
-	var provider = new firebase.auth.GoogleAuthProvider();
 
-	      provider.addScope('https://www.googleapis.com/auth/plus.login');
-		  provider.addScope('email');
-		  provider.addScope('profile');
-
-  firebase.auth().signInWithPopup(provider).then(function(result) {
-  // This gives you a Google Access Token. You can use it to access the Google API.
-		  var token = result.credential.accessToken;
-		  // The signed-in user info.
-		  var user = result.user;
-  // ...
-		}).catch(function(error) {
-		  // Handle Errors here.
-		  var errorCode = error.code;
-		  var errorMessage = error.message;
-		  // The email of the user's account used.
-		  var email = error.email;
-		  // The firebase.auth.AuthCredential type that was used.
-		  var credential = error.credential;
-		  // ...
-		});
-
-    btnLogout.show();
-          uemail.val('');
-  	      upassword.val('');
-});
 // //signeout
 btnLogout.click(function(e){
          
-    	 uemail.val('');
-  	     upassword.val('');
-  	      uemail.show()
-  	      upassword.show();
-         btnlogin.show();
-         btnSignup.show();
-         btnLogout.hide();
-  	 		
+    	 firebase.auth().signOut();
+ window.location.reload(true)
   	    
  
   });
 
+firebase.auth().onAuthStateChanged(function (firebaseUser) {
+ if (firebaseUser) {
+ console.log(firebaseUser);
+          $("#messageOne").hide();
+         $('#userZipcode').show();
+          $("#messageTwo").show();
+         btnLogout.show();
+          uemail.hide()
+          upassword.hide();
+         btnlogin.hide();
+         btnSignup.hide();;
+ } else {
+ console.log('not logged in');
+    $('#userZipcode').hide();
+            btnLogout.hide();
+     $("#messageTwo").hide();
+ } // end else statement
+ }); // end function
+
 $(document).ready(
 	function () {
 		$("#userZipcode").hide();
+    $("#messageTwo").hide();
 	}
  
 );
